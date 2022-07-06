@@ -9,15 +9,17 @@ if (elCart) {
     elCard.classList.toggle('shopping-card--open')
   });
 }
-
-elsTrash.forEach(function (elTrash){
-  elTrash.addEventListener('click', function (elTrash, index) {
-    if (`index == array.length - 1`) {
-      elCardInner.classList.add('shopping-card__list-wrapper--close')
-    } else {
-      console.log("Bu oxirgi element emas");
-    }
-
-    // elsCardItem.classList.add('shopping-card__item--close')
+let count = 0;
+if (elsTrash) {
+  elsTrash.forEach(function (item, index) {
+    elsTrash[index].addEventListener('click', function () {
+      count++;
+      if (count == elsTrash.length) {
+        elCardInner.classList.add('shopping-card__item--close');
+      }
+      else {
+        elsCardItem[index].classList.add('shopping-card__item--close');
+      }
+    });
   });
-});
+}

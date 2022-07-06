@@ -263,19 +263,10 @@ img {
   margin-left: 17px;
 }
 
-.shopping-card__item-name {
-
-}
 .shopping-card__item-pricing-wrappper * {
   display: inline-block;
 }
-.shopping-card__item-count-pricing {
 
-}
-.shopping-card__item-counter-icon {
-}
-.shopping-card__item-counter {
-}
 .shopping-card__item-pricing {
   color: var(--black);
   font-weight: 700;
@@ -289,11 +280,7 @@ img {
 }
 
 .shopping-card__item-button:hover {
-  opacity: 0.8;
-}
-
-.shopping-card__item-button:active {
-  opacity: 0.6;
+  opacity: 0.5;
 }
 
 .shopping-card__item-button-icon {
