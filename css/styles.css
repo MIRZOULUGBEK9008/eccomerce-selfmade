@@ -333,11 +333,11 @@ img {
 
 
 .site-header__cart {
-  margin-top: 4px;
   margin-right: 40px;
 }
 
 .cart {
+  display: flex;
   position: relative;
   border: none;
   background-color: transparent;
