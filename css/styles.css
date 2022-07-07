@@ -428,7 +428,7 @@ img {
 }
 
 .lightbox__inner {
-  margin-bottom: 32px;
+  margin-bottom: 16px;
 }
 
 .lightbox__img {
@@ -444,6 +444,7 @@ img {
   border-radius: 15px;
   border: none;
   object-fit: cover;
+  cursor: zoom-in;
 }
 
 .lightbox__list {
@@ -453,6 +454,10 @@ img {
   align-items: center;
   padding: 0;
   margin: 0;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-right: 7px;
+  padding-left: 7px;
   list-style: none;
 }
 
@@ -474,12 +479,28 @@ img {
   padding: 0;
   border-radius: 10px;
   background-color: transparent;
-  border: 2px solid transparent;
   cursor: pointer;
+  border: 2px solid transparent;
 }
 
-.lightbox__button:hover {
+.ligtbox__button:hover {
   border-color: var(--orange);
+}
+
+.lightbox__button--active {
+  position: relative;
+  border-color: var(--orange);
+}
+
+.lightbox__button--active::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 10px;
 }
 
 .hero__info {
@@ -577,8 +598,16 @@ img {
   cursor: pointer;
 }
 
+.counter__count:focus {
+  outline: none;
+}
+
 .counter__count:hover {
-  opacity: 0.6;
+  opacity: 0.5;
+}
+
+.counter__count:active {
+  background-color: rgba(255, 126, 27, 0.4);
 }
 
 .counter__text {

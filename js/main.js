@@ -1,9 +1,22 @@
+// Object
+const cartModifiers = {
+  closeItem: 'shopping-card__item--close',
+  toggleActiveClass: 'lightbox__button--active'
+};
+
+// Variables
 const elCart = document.querySelector('.js-cart'),
 elCard = document.querySelector('.js-card'),
+elCardInner = document.querySelector('.js-card-inner'),
+elCount = document.querySelector('.counter__text'),
+elMinus = document.querySelector('.js-minus'),
+elPlus = document.querySelector('.js-plus'),
 elsTrash = document.querySelectorAll('.js-trash'),
 elsCardItem = document.querySelectorAll('.js-card-item'),
-elCardInner = document.querySelector('.js-card-inner');
+elsLightboxButton = document.querySelectorAll('.js-lightbox-button');
 
+
+// Cart
 if (elCart) {
   elCart.addEventListener('click', function () {
     elCard.classList.toggle('shopping-card--open')
@@ -15,11 +28,41 @@ if (elsTrash) {
     elsTrash[index].addEventListener('click', function () {
       count++;
       if (count == elsTrash.length) {
-        elCardInner.classList.add('shopping-card__item--close');
+        elCardInner.classList.add(cartModifiers.closeItem);
       }
       else {
-        elsCardItem[index].classList.add('shopping-card__item--close');
+        elsCardItem[index].classList.add(cartModifiers.closeItem);
       }
     });
   });
 }
+
+function removeAllActiveClass() {
+
+  elsLightboxButton.forEach(function (element) {
+    element.classList.remove(cartModifiers.toggleActiveClass);
+  });
+}
+
+elsLightboxButton.forEach(function (element, index){
+  element.addEventListener('click', function () {
+    // Remove Class
+    removeAllActiveClass();
+    // Add active
+    element.classList.add(cartModifiers.toggleActiveClass);
+  });
+});
+
+elPlus.addEventListener('click', function (){
+  elCount.textContent = + elCount.textContent + 1;
+});
+
+
+// Counter
+elMinus.addEventListener('click', function (){
+  if (elCount.textContent > 0) {
+    elCount.textContent = + elCount.textContent - 1;
+  } else {
+    elCount.textContent = 0;
+  }
+});
