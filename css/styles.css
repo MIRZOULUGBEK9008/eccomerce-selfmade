@@ -127,10 +127,28 @@ img {
   line-height: auto;
   text-align: center;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .button--block {
   width: 100%;
+}
+
+.button--icon {
+  margin-left: 16px;
+  border: none;
+  width: 272px;
+  box-shadow: 0px 20px 50px -20px #FF7E1B;
+}
+
+.button--icon-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart-icon {
+  margin-right: 15px;
 }
 
 
@@ -386,4 +404,185 @@ img {
 .auth__img {
   border: 2px solid transparent;
   border-radius: 50%;
+}
+
+
+/* MAIN-CONTENT  */
+.hero-wrapper {
+  padding-top: 90px;
+  padding-bottom: 130px;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1115px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.hero__lightbox {
+  margin-right: 20px;
+}
+
+.lightbox__inner {
+  margin-bottom: 32px;
+}
+
+.lightbox__img {
+  display: block;
+  width: 88px;
+  height: 88px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.lightbox__img--main {
+  width: 433px;
+  height: 445px;
+  border-radius: 15px;
+  border: none;
+}
+
+.lightbox__list {
+  width: 450px;
+  overflow-x: scroll;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.lightbox__item {
+  flex-shrink: 0;
+}
+
+.lightbox__item:not(:last-child) {
+  margin-right: 32px;
+}
+
+.ligtbox__button {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  border-radius: 10px;
+  background-color: transparent;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+
+.lightbox__button:hover {
+  border-color: var(--orange);
+}
+
+.hero__info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 445px;
+  flex-shrink: 0;
+}
+
+.hero__text {
+  text-transform: uppercase;
+  color: var(--orange);
+  font-size: 13px;
+  line-height: auto;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.hero__title {
+  margin-top: 0;
+  margin-bottom: 32px;
+  text-transform: capitalize;
+  color: var(--black);
+  font-size: 44px;
+  line-height: 48px;
+}
+
+.hero__description {
+  margin: 0;
+  margin-bottom: 24px;
+}
+
+.hero__sale-info {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 32px;
+}
+
+.hero__sale-pricing {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.hero__sale-pricing * {
+  display: inline-block;
+}
+
+.sneakers-price {
+  font-size: 28px;
+  line-height: auto;
+  font-weight: 700;
+  color: var(--black);
+}
+
+.sneakers-price-old {
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 700;
+  text-decoration: line-through;
+}
+
+.sale {
+  padding: 8px 8px 4px 8px;
+  margin-left: 16px;
+  font-weight: 700;
+  line-height: normal;
+  background-color: #ffeee2;
+  color: var(--orange);
+  border-radius: 6px;
+  white-space: nowrap;
+}
+
+.counter-button-wrapper {
+  display: flex;
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+  background-color: #f6f8fd;
+  border-radius: 10px;
+  width: 160px;
+}
+
+.counter__count {
+  display: inline-flex;
+  margin: 0;
+  padding: 24px 16px;
+  border: none;
+  background-color: transparent;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.counter__count:hover {
+  opacity: 0.6;
+}
+
+.counter__text {
+  display: inline-block;
+  color: var(--black);
+  text-align: center;
+  line-height: auto;
+  font-weight: 700;
+  flex-grow: 1;
+  flex-wrap: 1;
 }
