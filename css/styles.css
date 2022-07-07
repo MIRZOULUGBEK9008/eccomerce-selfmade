@@ -294,11 +294,21 @@ img {
 .shopping-card__item-button {
   padding: 0;
   border: none;
+  background-color: transparent;
   cursor: pointer;
+  color: #c3cad9;
+}
+
+.shopping-card__item-button:focus {
+  outline: none;
+}
+
+.shopping-card__item-button svg {
+  display: flex;
 }
 
 .shopping-card__item-button:hover {
-  opacity: 0.5;
+  color: var(--black);
 }
 
 .shopping-card__item-button-icon {

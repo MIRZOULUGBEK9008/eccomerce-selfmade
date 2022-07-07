@@ -53,14 +53,14 @@ elsLightboxButton.forEach(function (element, index){
   });
 });
 
+
+// Counter
 elPlus.addEventListener('click', function (){
   if (elCount.textContent < 99) {
     elCount.textContent = + elCount.textContent + 1;
   }
 });
 
-
-// Counter
 elMinus.addEventListener('click', function (){
   if (elCount.textContent > 1) {
     elCount.textContent = + elCount.textContent - 1;
