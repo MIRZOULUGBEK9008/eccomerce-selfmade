@@ -586,16 +586,22 @@ img {
   background-color: #f6f8fd;
   border-radius: 10px;
   width: 160px;
+  height: 56px;
+  padding: 5px;
 }
 
 .counter__count {
   display: inline-flex;
   margin: 0;
-  padding: 24px 16px;
+  padding: 19px 11px;
   border: none;
   background-color: transparent;
   border-radius: 10px;
   cursor: pointer;
+}
+
+.counter__count--plus {
+  padding: 15px 11px;
 }
 
 .counter__count:focus {
@@ -603,7 +609,7 @@ img {
 }
 
 .counter__count:hover {
-  opacity: 0.5;
+  opacity: 0.8;
 }
 
 .counter__count:active {
