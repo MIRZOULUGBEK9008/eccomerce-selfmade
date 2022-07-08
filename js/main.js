@@ -51,10 +51,7 @@ elsLightboxButton.forEach(function (element, index){
     removeAllActiveClass();
     // Add active
     element.classList.add(cartModifiers.toggleActiveClass);
-    // console.log(element.querySelector('.lightbox__img').src);
-    // console.log(element);
     elLightboxMainImg.src = element.querySelector('.lightbox__img').src;
-    console.log(elLightboxMainImg.src);
   });
 });
 
@@ -71,5 +68,3 @@ elMinus.addEventListener('click', function (){
     elCount.textContent = + elCount.textContent - 1;
   }
 });
-
-// console.log(`${elsLightboxButton.nextElementSibling.src}`);
