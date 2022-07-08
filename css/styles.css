@@ -497,6 +497,11 @@ img {
   border-color: var(--orange);
 }
 
+.ligtbox__button:focus {
+  outline: none;
+  border-color: var(--orange);
+}
+
 .lightbox__button--active {
   position: relative;
   border-color: var(--orange);
@@ -616,6 +621,8 @@ img {
 
 .counter__count:focus {
   outline: none;
+  background-color: rgba(255, 126, 27, 0.4);
+  opacity: 0.8;
 }
 
 .counter__count:hover {

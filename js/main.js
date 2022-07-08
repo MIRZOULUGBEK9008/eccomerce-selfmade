@@ -13,7 +13,8 @@ elMinus = document.querySelector('.js-minus'),
 elPlus = document.querySelector('.js-plus'),
 elsTrash = document.querySelectorAll('.js-trash'),
 elsCardItem = document.querySelectorAll('.js-card-item'),
-elsLightboxButton = document.querySelectorAll('.js-lightbox-button');
+elsLightboxButton = document.querySelectorAll('.js-lightbox-button'),
+elLightboxMainImg = document.querySelector('.js-lightbox-main-img');
 
 
 // Cart
@@ -50,6 +51,10 @@ elsLightboxButton.forEach(function (element, index){
     removeAllActiveClass();
     // Add active
     element.classList.add(cartModifiers.toggleActiveClass);
+    // console.log(element.querySelector('.lightbox__img').src);
+    // console.log(element);
+    elLightboxMainImg.src = element.querySelector('.lightbox__img').src;
+    console.log(elLightboxMainImg.src);
   });
 });
 
@@ -66,3 +71,5 @@ elMinus.addEventListener('click', function (){
     elCount.textContent = + elCount.textContent - 1;
   }
 });
+
+// console.log(`${elsLightboxButton.nextElementSibling.src}`);
