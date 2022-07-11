@@ -458,7 +458,8 @@ img {
 }
 
 .lightbox__list {
-  width: 450px;
+  max-width: 480px;
+  width: 100%;
   overflow-x: scroll;
   display: flex;
   align-items: center;
@@ -469,11 +470,6 @@ img {
   padding-right: 7px;
   padding-left: 7px;
   list-style: none;
-}
-
-.lightbox__list::-webkit-scrollbar-track {
-  background-color: #ff7e1b35;
-  border-radius: 20px;
 }
 
 .lightbox__item {
