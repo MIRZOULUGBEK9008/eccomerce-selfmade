@@ -208,6 +208,7 @@ img {
 
 .sitenav__link:focus {
   outline: none;
+  color: var(--black);
 }
 
 .sitenav__link:focus.sitenav__link::after {
@@ -296,6 +297,10 @@ img {
   flex-shrink: 0;
   margin-right: 17px;
   margin-left: 17px;
+}
+
+.shopping-card__item-name {
+  text-transform: capitalize;
 }
 
 .shopping-card__item-pricing-wrappper * {
