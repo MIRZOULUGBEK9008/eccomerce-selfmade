@@ -154,7 +154,7 @@ img {
 
 
 /* SITE NAVIGATOR  */
-.sitenav {
+.site-header__sitenav {
   margin-right: auto;
 }
 
@@ -169,33 +169,30 @@ img {
   margin-right: 32px;
 }
 
-.sitenav__link::after {
-  content: "";
-  position: absolute;
-  top: 68px;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  background-color: transparent;
-}
-
 .sitenav__link {
   position: relative;
   display: block;
+  padding-top: 41px;
+  padding-bottom: 45px;
   text-decoration: none;
   font-size: 15px;
   line-height: 26px;
   color: var(--gray);
 }
 
-.sitenav__link:hover {
-  color: var(--black);
-}
-
-.sitenav__link:hover.sitenav__link::after {
+.sitenav__link:hover::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
   background-color: var(--orange);
 }
 
+.sitenav__link:hover {
+  color: var(--black);
+}
 
 /* SHOPPING-CARD  */
 .shopping-card {
@@ -324,8 +321,6 @@ img {
   position: relative;
   display: flex;
   align-items: center;
-  padding-top: 28px;
-  padding-bottom: 34px;
   border-bottom: 1px solid #e4e9f2;
 }
 
