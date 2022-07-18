@@ -142,6 +142,14 @@ img {
   box-shadow: 0px 20px 50px -20px #FF7E1B;
 }
 
+.button--icon:hover {
+  background-color: #ffab6a;
+}
+
+.button--icon:active {
+  opacity: 0.6;
+}
+
 .button-inner {
   display: flex;
   align-items: center;
