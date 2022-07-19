@@ -215,6 +215,11 @@ img {
   background-color: var(--orange);
 }
 
+.sitenav__link:active {
+  opacity: 0.6;
+}
+
+
 /* SHOPPING-CARD  */
 .shopping-card {
   display: none;
@@ -443,14 +448,15 @@ img {
   padding-bottom: 130px;
 }
 
-.hero {
+.hero__container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
-  max-width: 1115px;
-  margin-right: auto;
-  margin-left: auto;
+  max-width: 1063px;
+}
+
+.lightbox {
+  flex-shrink: 0;
 }
 
 .hero__lightbox {
